@@ -4,7 +4,7 @@
       {{#each model as |post|}}
         <li class="list-group-item">
           {{!-- {{#link-to 'posts.post' post}} --}}
-            {{post.title}} by {{post.author}} on {{post.create_date}}
+            <b>{{post.title}}</b> by {{post.author}} on {{post.date}}
           {{!-- {{/link-to}} --}}
         </li>
       {{/each}}

@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('posts');
 
   this.route('post', {
-    path: ':post_id'
+    path: 'posts/post/:post_id'
   });
 });
 
