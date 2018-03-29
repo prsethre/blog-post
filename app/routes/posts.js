@@ -5,7 +5,4 @@ export default Route.extend({
     const posts = this.store.findAll('post');
     return posts;
   },
-  activate() {
-    console.log('Entering posts route');
-  }
 });
