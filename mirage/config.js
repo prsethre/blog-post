@@ -4,7 +4,6 @@ export default function() {
   this.get('/posts'); //shorthand
 
   this.get('/posts/:post_id', function (db, request) {
-    console.log('getting api for post')
     const id = request.params.post_id;
     return db.posts.find(id);
   });
