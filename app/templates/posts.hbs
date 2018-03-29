@@ -2,13 +2,12 @@
   <div class="col-md-6">
     <ul class="list-group posts">
       {{#each model as |post|}}
-        <li class="list-group-item">
-          {{#link-to 'post' post}}
-            <b>{{post.title}}</b> by {{post.author}} on {{post.date}}
-          {{/link-to}}
-        </li>
+        {{#link-to 'post' post}}
+          <li class="list-group-item">
+              <b>{{post.title}}</b> by <em>{{post.author}}</em> on {{post.date}}
+          </li>
+        {{/link-to}}
       {{/each}}
     </ul>
   </div>
-  {{outlet}}
 </div>

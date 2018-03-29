@@ -1,0 +1,12 @@
+<img src={{model.image}} class="center-block"/>
+<br>
+<h2>
+  {{model.author}}
+</h2>
+<p>
+  {{model.content}}
+</p>
+Posted: {{model.date}}
+
+{{!-- <button{{action "editPost" model.id}}>Edit Post</button> --}}
+{{#link-to 'edit' model.id tagName='button'}}Edit{{/link-to}}
