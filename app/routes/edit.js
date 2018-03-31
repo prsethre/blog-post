@@ -6,8 +6,12 @@ export default Route.extend({
   },
 
   actions: {
-    saveEdits() {
-      console.log('saveEditsClicked', this.get(model));
+    saveEdits(post) {
+      if (post.get('hasDirtyAttributes')) {
+        console.log(typeof(post));
+        post.save()
+      }
+      this.transitionTo('post', post.get('id'))
     },
   }
 });

@@ -7,6 +7,14 @@ export default function() {
     const id = request.params.post_id;
     return db.posts.find(id);
   });
+
+  this.patch('/posts/:id', function (db, request) {
+    const id = request.params.id;
+    const dataRecord = JSON.parse(request.requestBody);
+    // console.log(dataRecord.data.attributes)
+    // return db.posts.where({id}).update(dataRecord.data.attributes);
+    db.posts.update(id, dataRecord.data.attributes);
+  });
 }
 
   // These comments are here to help you get started. Feel free to delete them.
