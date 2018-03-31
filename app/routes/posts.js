@@ -1,14 +1,9 @@
 import Route from '@ember/routing/route';
-import { computed } from '@ember/object';
+import DateFormat from '../mixins/date-format-mixin';
 
-export default Route.extend({
+export default Route.extend(DateFormat, {
   model() {
     const posts = this.store.findAll('post');
     return posts;
   },
-
-  displayDate: computed('date', function () {
-    const date = this.get('date');
-    return date.toDateString();
-  }),
 });
