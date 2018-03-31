@@ -13,7 +13,7 @@ export default function() {
     const dataRecord = JSON.parse(request.requestBody);
     // console.log(dataRecord.data.attributes)
     // return db.posts.where({id}).update(dataRecord.data.attributes);
-    db.posts.update(id, dataRecord.data.attributes);
+    db.posts.find(id).update(dataRecord.data.attributes);
   });
 }
 

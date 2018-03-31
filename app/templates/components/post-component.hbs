@@ -1,11 +1,13 @@
-<img src={{model.image}} class="center-block"/>
+<img src={{image}} class="center-block"/>
 <br>
 <h2>
-  {{model.author}}
+  {{title}}
 </h2>
+<p>By {{author}}</p>
+<br/>
 <p>
-  {{model.content}}
+  {{content}}
 </p>
-Posted: {{model.date}}
+Posted: {{formattedDate}}
 <br>
-{{#link-to 'edit' model.id tagName='button'}}Edit{{/link-to}}
+{{#link-to 'edit' id tagName='button'}}Edit{{/link-to}}

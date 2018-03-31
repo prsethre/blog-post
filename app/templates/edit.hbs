@@ -2,10 +2,10 @@
 <img src={{model.image}} class="center-block"/>
 <br><h3>Image path</h3>{{input value=model.image}}
  <h3>Title</h3>{{input value=model.title}}
-<br/> <h3>Excerpt</h3>{{textarea value=model.excerpt cols="80" rows="6"}}
+<br/> <h3>Excerpt</h3>{{textarea value=model.excerpt cols="80" rows="3"}}
 <br/> <h3>Content</h3>{{textarea value=model.content cols="80" rows="6"}}
 <br/> <h3>Author</h3>{{input value=model.author}}
-<br/> <h3>Date Published</h3>{{input value=model.date}}
+<br/> <h3>Date Published</h3>{{bootstrap-datepicker value=model.date autoclose=true format="DD MM d, yyyy"}}
 <br/>
 
 

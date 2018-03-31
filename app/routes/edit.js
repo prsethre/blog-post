@@ -8,7 +8,6 @@ export default Route.extend({
   actions: {
     saveEdits(post) {
       if (post.get('hasDirtyAttributes')) {
-        console.log(typeof(post));
         post.save()
       }
       this.transitionTo('post', post.get('id'))

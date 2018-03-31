@@ -6,5 +6,5 @@ export default DS.Model.extend({
   content: DS.attr('string'),
   author: DS.attr('string'),
   image: DS.attr('string'),
-  date: DS.attr('string'),
+  date: DS.attr('date'),
 });
