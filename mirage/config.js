@@ -8,7 +8,7 @@ export default function() {
     return db.posts.find(id);
   });
 
-  this.post('/new-post', function (db, request) {
+  this.post('/posts', function (db, request) {
     console.log(request);
     const dataRecord = JSON.parse(request.requestBody);
     db.posts.insert(dataRecord);
