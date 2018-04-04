@@ -8,11 +8,15 @@ export default function() {
     return db.posts.find(id);
   });
 
+  this.post('/new-post', function (db, request) {
+    console.log(request);
+    const dataRecord = JSON.parse(request.requestBody);
+    db.posts.insert(dataRecord);
+  });
+
   this.patch('/posts/:id', function (db, request) {
     const id = request.params.id;
     const dataRecord = JSON.parse(request.requestBody);
-    // console.log(dataRecord.data.attributes)
-    // return db.posts.where({id}).update(dataRecord.data.attributes);
     db.posts.find(id).update(dataRecord.data.attributes);
   });
 }
