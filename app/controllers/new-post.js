@@ -7,7 +7,7 @@ export default Controller.extend({
       const title = this.get('title');
       const image = this.get('image');
       const excerpt = this.get('excerpt');
-      const content = this.get('content');
+      const content = this.get('text');
       const date = this.get('date');
       const author = this.get('author');
 
@@ -21,7 +21,12 @@ export default Controller.extend({
       }
 
       const newRecord = store.createRecord('post', newPost);
-      newRecord.save();
+      try {
+        newRecord.save();
+      } catch (err) {
+        console.log(err);
+      }
+      this.transitionToRoute('posts');
     }
   }
 });
