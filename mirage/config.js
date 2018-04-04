@@ -8,7 +8,7 @@ export default function() {
     return db.posts.find(id);
   });
 
-  this.post('/posts');
+  this.post('/posts'); // I don't know why this works and the below does not :(
   // this.post('/posts', function (db, request) {
   //   console.log(request);
   //   const dataRecord = JSON.parse(request.requestBody);
